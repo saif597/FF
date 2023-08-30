@@ -1,0 +1,27 @@
+import {View, Text} from 'react-native';
+import React from 'react';
+import Dashboard from './screens/Dashboard';
+import History from './screens/History';
+import PieChartC from './components/PieChart';
+import ProductScreen from './screens/ProductScreen';
+
+const nikeShoesProduct = {
+  name: 'Nike Air Max 2023',
+  price: '$129.99',
+  id: 'NS2023',
+  quantitySold: 250,
+  quantityAvailable: 50,
+  description:
+    'The Nike Air Max 2023 is designed to provide maximum comfort and style. It features a lightweight and breathable upper, cushioned sole for impact protection, and a sleek modern design. Perfect for running or casual wear.',
+  brand: 'Nike',
+  category: 'Running Shoes',
+  color: 'Black/White',
+  material: 'Mesh Upper, Rubber Sole',
+  size: 'Available in various sizes',
+};
+
+const App = () => {
+  return <ProductScreen product={nikeShoesProduct} />;
+};
+
+export default App;

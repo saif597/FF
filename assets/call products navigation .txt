@@ -1,0 +1,125 @@
+import Dashboard from './screens/Dashboard';
+import ProductsScreen from './screens/PoductsScreen';
+import {NavigationContainer} from '@react-navigation/native';
+
+import {createStackNavigator} from '@react-navigation/native-stack';
+const Stack = createStackNavigator();
+const productsObj = [
+  {
+    name: 'Adidas Ultra Boost 2023',
+    price: '$149.99',
+    id: 'AB2023',
+    quantitySold: 300,
+    quantityAvailable: 75,
+    description:
+      'The Adidas Ultra Boost 2023 is designed for ultimate performance and comfort. It features a responsive Boost midsole, Primeknit upper for a snug fit, and stylish design.',
+    brand: 'Adidas',
+    category: 'Running Shoes',
+    color: 'Grey/Black',
+    material: 'Primeknit Upper, Boost Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'Puma Ignite XT',
+    price: '$89.99',
+    id: 'PIXT',
+    quantitySold: 150,
+    quantityAvailable: 25,
+    description:
+      'The Puma Ignite XT offers superior energy return and flexibility. It features Ignite Foam cushioning, breathable mesh upper, and a durable rubber outsole.',
+    brand: 'Puma',
+    category: 'Training Shoes',
+    color: 'Blue/Silver',
+    material: 'Mesh Upper, Ignite Foam Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'Puma Ignite XG',
+    price: '$90.99',
+    id: 'PIXTq',
+    quantitySold: 150,
+    quantityAvailable: 25,
+    description:
+      'The Puma Ignite XTG offers superior energy return and flexibility. It features Ignite Foam cushioning, breathable mesh upper, and a durable rubber outsole.',
+    brand: 'Puma',
+    category: 'Training Shoes',
+    color: 'Silver/Black',
+    material: 'Mesh Upper, Ignite Foam Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'Reebok Classic Leather',
+    price: '$79.99',
+    id: 'RCL',
+    quantitySold: 400,
+    quantityAvailable: 100,
+    description:
+      'The Reebok Classic Leather is a timeless casual shoe. It features a soft leather upper, EVA midsole for cushioning, and a clean, iconic design.',
+    brand: 'Reebok',
+    category: 'Casual Shoes',
+    color: 'White',
+    material: 'Leather Upper, EVA Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'Under Armour HOVR Sonic 5',
+    price: '$119.99',
+    id: 'UAHS5',
+    quantitySold: 200,
+    quantityAvailable: 50,
+    description:
+      'The Under Armour HOVR Sonic 5 delivers a balance of cushioning and responsiveness. It features UA HOVR technology, breathable upper, and a secure lacing system.',
+    brand: 'Under Armour',
+    category: 'Running Shoes',
+    color: 'Black/Red',
+    material: 'Mesh Upper, HOVR Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'New Balance Fresh Foam 880v11',
+    price: '$109.99',
+    id: 'NBFF880',
+    quantitySold: 280,
+    quantityAvailable: 60,
+    description:
+      'The New Balance Fresh Foam 880v11 provides plush cushioning and a smooth ride. It features Fresh Foam midsole, engineered mesh upper, and a versatile design.',
+    brand: 'New Balance',
+    category: 'Running Shoes',
+    color: 'Grey/Blue',
+    material: 'Engineered Mesh Upper, Fresh Foam Midsole',
+    size: 'Available in various sizes',
+  },
+  {
+    name: 'Vans Old Skool',
+    price: '$59.99',
+    id: 'VOS',
+    quantitySold: 320,
+    quantityAvailable: 80,
+    description:
+      'The Vans Old Skool is a classic skateboarding shoe with iconic side stripe. It features a canvas and suede upper, padded collar, and signature waffle outsole.',
+    brand: 'Vans',
+    category: 'Skateboarding Shoes',
+    color: 'Black/White',
+    material: 'Canvas and Suede Upper, Rubber Sole',
+    size: 'Available in various sizes',
+  },
+];
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="ProductsScreen">
+        <Stack.Screen
+          name="ProductsScreen"
+          component={() => <ProductsScreen products={productsObj} />}
+        />
+        <Stack.Screen
+          name="ProductScreen"
+          component={() => <ProductsScreen products={productsObj[1]} />}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
