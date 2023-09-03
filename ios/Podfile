@@ -21,6 +21,14 @@ target 'uff' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
+  
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
+  pod 'RNPermissions', :path => '../node_modules/react-native-permissions'
+
   target 'uffTests' do
     inherit! :complete
     # Pods for testing

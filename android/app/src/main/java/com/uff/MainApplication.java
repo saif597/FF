@@ -4,6 +4,10 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.safaeean.barcodescanner.BarcodeScannerPackage;
+import com.safaeean.barcodescanner.BarcodeScannerPackage;
+import com.zoontek.rnpermissions.RNPermissionsPackage;
+import org.reactnative.camera.RNCameraPackage;
 import com.horcrux.svg.SvgPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -31,6 +35,8 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           return packages;
         }
+       
+    
 
         @Override
         protected String getJSMainModuleName() {
